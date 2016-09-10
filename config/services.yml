@@ -1,0 +1,20 @@
+imports:
+    - { resource: tables.yml }
+services:
+    dmzx.memberprofileviews.listener:
+        class: dmzx\memberprofileviews\event\listener
+        arguments:
+            - '@config'
+            - '@user'
+            - '@template'
+            - '@dbal.conn'
+            - '%core.root_path%'
+            - '%core.adm_relative_path%'
+            - '%core.php_ext%'
+            - '%dmzx.memberprofileviews.table%'
+        tags:
+            - { name: event.listener }
+    dmzx.memberprofileviews.acplistener:
+        class: dmzx\memberprofileviews\event\acp_listener
+        tags:
+            - { name: event.listener }            

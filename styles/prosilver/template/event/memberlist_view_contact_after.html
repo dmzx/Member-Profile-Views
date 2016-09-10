@@ -1,0 +1,24 @@
+<!-- IF MEMBER_PROFILE_VIEW and S_USER_LOGGED_IN -->
+<div class="panel">
+	<div class="inner">
+	<dl>
+		<div class="memberprofilecount">
+			<div class="inner">
+				<dd>{L_MEMBER_PROFILE_VIEW}{L_COLON} <strong>{MEMBER_PROFILE_VIEWS}</strong></dd>
+				<dd><font size="2">{MEMBER_PROFILE_TEXT}</font></dd>
+			</div>
+		</div>
+	</dl>
+<hr/>
+	<dl>
+		<div class="memberprofileviewed">
+			<div class="inner">
+				<!-- BEGIN member_viewed -->
+					<div class="member-viewed-avatar">{member_viewed.AVATAR}</div> <span><a href="{member_viewed.URL}" "{member_viewed.TIME}" "{member_viewed.USERNAME_COLOUR}">{member_viewed.USERNAME}</a> ({member_viewed.COUNTER})</span><!-- IF not member_viewed.S_LAST_ROW -->, <!-- ENDIF -->
+				<!-- END member_viewed -->
+			</div>
+		</div>
+	</dl>
+	</div>
+</div>
+<!-- ENDIF -->
