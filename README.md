@@ -5,7 +5,7 @@
 ## Install
 1. Download the latest release.
 2. In the `ext` directory of your phpBB board, create a new directory named `dmzx` (if it does not already exist).
-3. Copy the `memberprofileviews` folder to `phpBB/ext/dmzx/` (if done correctly, you'll have the main extension class at (your forum root)/ext/dmzx/memberprofileviews/composer.json).
+3. Copy the `memberprofileviews` folder to `/ext/dmzx/` (if done correctly, you'll have the main extension class at (your forum root)/ext/dmzx/memberprofileviews/composer.json).
 4. Navigate in the ACP to `Customise -> Manage extensions`.
 5. Look for `Member Profile Views` under the Disabled Extensions list, and click its `Enable` link.
 

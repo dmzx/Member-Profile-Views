@@ -31,7 +31,7 @@ class listener implements EventSubscriberInterface
 	/** @var string */
 	protected $root_path;
 
-	/** @var string phpBB admin path */
+	/** @var string */
 	protected $phpbb_admin_path;
 
 	/** @var string */
@@ -47,13 +47,22 @@ class listener implements EventSubscriberInterface
 	* @param \phpbb\user						$user
 	* @param \phpbb\template\template			$template
 	* @param \phpbb\db\driver\driver_interface	$db
-	* @param									$root_path
-	* @param									$phpbb_admin_path
-	* @param									$php_ext
-	* @param									$memberprofileviews_table
+	* @param string								$root_path
+	* @param string								$phpbb_admin_path
+	* @param string								$php_ext
+	* @param string								$memberprofileviews_table
 	*
 	*/
-	public function __construct(\phpbb\config\config $config, \phpbb\user $user, \phpbb\template\template $template, \phpbb\db\driver\driver_interface $db, $root_path, $phpbb_admin_path, $php_ext, $memberprofileviews_table)
+	public function __construct(
+		\phpbb\config\config $config,
+		\phpbb\user $user,
+		\phpbb\template\template $template,
+		\phpbb\db\driver\driver_interface $db,
+		$root_path,
+		$phpbb_admin_path,
+		$php_ext,
+		$memberprofileviews_table
+	)
 	{
 		$this->config 						= $config;
 		$this->user							= $user;

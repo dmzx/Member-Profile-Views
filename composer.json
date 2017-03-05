@@ -3,8 +3,8 @@
 	"type": "phpbb-extension",
 	"description": "This extension shows the profile views count in profile",
 	"homepage": "http://www.dmzx-web.net",
-	"version": "1.0.2",
-	"time": "2016-06-05",
+	"version": "1.0.3",
+	"time": "2017-01-20",
 	"keywords": [
 		"phpbb",
 		"extension",
@@ -21,7 +21,7 @@
 	],
 	"require": {
 		"php": ">=5.3.3",
-		"phpbb/phpbb": ">=3.1.0,<3.2.0@dev"
+		"phpbb/phpbb": ">=3.1.0,<3.3"
 	},
 	"require-dev": {
 		"phpbb/epv": "dev-master"
@@ -29,12 +29,12 @@
 	"extra": {
 		"display-name": "Member Profile Views",
 		"soft-require": {
-			"phpbb/phpbb": ">=3.1.0,<3.2.0@dev"
+			"phpbb/phpbb": ">=3.1.0,<3.3"
 		},
 		"version-check": {
-			"host": "www.phpbb.com",
-			"directory": "/customise/db/extension/member_profile_views",
-			"filename": "version_check"
+			"host": "www.dmzx-web.net",
+			"directory": "/versions",
+			"filename": "memberprofileviews_version.json"
 		}
 	}
 }
