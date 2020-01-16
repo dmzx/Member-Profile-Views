@@ -2,26 +2,27 @@
 	"name": "dmzx/memberprofileviews",
 	"type": "phpbb-extension",
 	"description": "This extension shows the profile views count in profile",
-	"homepage": "http://www.dmzx-web.net",
-	"version": "1.0.3",
-	"time": "2017-01-20",
+	"homepage": "https://www.dmzx-web.net",
+	"version": "1.0.4",
+	"time": "2020-01-15",
 	"keywords": [
 		"phpbb",
 		"extension",
 		"memberprofileviews"
 	],
-	"license": "GPL-2.0",
+	"license": "GPL-2.0-only",
 	"authors": [
 		{
 			"name": "dmzx",
-			"homepage": "http://www.dmzx-web.net",
+			"homepage": "https://www.dmzx-web.net",
 			"email": "info@dmzx-web.net",
 			"role": "Extension Developer"
 		}
 	],
 	"require": {
 		"php": ">=5.3.3",
-		"phpbb/phpbb": ">=3.1.0,<3.3"
+		"composer/installers": "~1.0",
+		"phpbb/phpbb": ">=3.2.0,<4.4.0@dev"
 	},
 	"require-dev": {
 		"phpbb/epv": "dev-master"
@@ -29,12 +30,13 @@
 	"extra": {
 		"display-name": "Member Profile Views",
 		"soft-require": {
-			"phpbb/phpbb": ">=3.1.0,<3.3"
+			"phpbb/phpbb": ">=3.2.0,<4.4.0@dev"
 		},
 		"version-check": {
 			"host": "www.dmzx-web.net",
 			"directory": "/versions",
-			"filename": "memberprofileviews_version.json"
+			"filename": "memberprofileviews_version.json",
+			"ssl": true
 		}
 	}
 }

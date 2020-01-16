@@ -1,2 +1,2 @@
 parameters:
-    dmzx.memberprofileviews.table: %core.table_prefix%memberprofileviews
+    dmzx.memberprofileviews.table: '%core.table_prefix%memberprofileviews'
