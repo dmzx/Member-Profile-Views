@@ -9,20 +9,24 @@
 
 namespace dmzx\memberprofileviews\event;
 
+use phpbb\config\config;
+use phpbb\db\driver\driver_interface;
+use phpbb\template\template;
+use phpbb\user;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class listener implements EventSubscriberInterface
 {
-	/** @var \phpbb\config\config */
+	/** @var config */
 	protected $config;
 
-	/** @var \phpbb\user */
+	/** @var user */
 	protected $user;
 
-	/** @var \phpbb\template\template */
+	/** @var template */
 	protected $template;
 
-	/** @var \phpbb\db\driver\driver_interface */
+	/** @var driver_interface */
 	protected $db;
 
 	/** @var string */
@@ -40,21 +44,21 @@ class listener implements EventSubscriberInterface
 	/**
 	* Constructor
 	*
-	* @param \phpbb\config\config				$config
-	* @param \phpbb\user						$user
-	* @param \phpbb\template\template			$template
-	* @param \phpbb\db\driver\driver_interface	$db
-	* @param string								$root_path
-	* @param string								$phpbb_admin_path
-	* @param string								$php_ext
-	* @param string								$memberprofileviews_table
+	* @param config				$config
+	* @param user				$user
+	* @param template			$template
+	* @param driver_interface	$db
+	* @param string				$root_path
+	* @param string				$phpbb_admin_path
+	* @param string				$php_ext
+	* @param string				$memberprofileviews_table
 	*
 	*/
 	public function __construct(
-		\phpbb\config\config $config,
-		\phpbb\user $user,
-		\phpbb\template\template $template,
-		\phpbb\db\driver\driver_interface $db,
+		config $config,
+		user $user,
+		template $template,
+		driver_interface $db,
 		$root_path,
 		$phpbb_admin_path,
 		$php_ext,

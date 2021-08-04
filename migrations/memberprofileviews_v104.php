@@ -9,7 +9,9 @@
 
 namespace dmzx\memberprofileviews\migrations;
 
-class memberprofileviews_v104 extends \phpbb\db\migration\migration
+use phpbb\db\migration\migration;
+
+class memberprofileviews_v104 extends migration
 {
 	static public function depends_on()
 	{
