@@ -154,6 +154,7 @@ class listener implements EventSubscriberInterface
 				'COUNTER'			=> number_format($totalviewsmember['counter_user']),
 			]);
 		}
+		$this->db->sql_freeresult($totalviews);
 
 		$sql = 'SELECT SUM(counter_user) AS total_views
 			FROM ' . $this->memberprofileviews_table . '

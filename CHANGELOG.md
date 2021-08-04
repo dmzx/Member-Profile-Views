@@ -4,7 +4,7 @@
 
 - Code update.
 - Short syntax.
-- Add numberformat.
+- Add number format.
 
 ### 1.0.4 - 2020-01-15
 
