@@ -151,7 +151,7 @@ class listener implements EventSubscriberInterface
 				'TIME'				=> $user_time,
 				'URL'				=> $url,
 				'AVATAR'			=> empty($avatar) ? '<img src="' . $this->phpbb_admin_path . 'images/no_avatar.gif" width="60px;" height="60px;" alt="" />' : $avatar,
-				'COUNTER'			=> $totalviewsmember['counter_user'],
+				'COUNTER'			=> number_format($totalviewsmember['counter_user']),
 			]);
 		}
 
@@ -165,7 +165,7 @@ class listener implements EventSubscriberInterface
 
 		$this->template->assign_vars([
 			'MEMBER_PROFILE_VIEW'			=> true,
-			'MEMBER_PROFILE_VIEWS'			=> $total_views,
+			'MEMBER_PROFILE_VIEWS'			=> number_format($total_views),
 			'MEMBER_PROFILE_TEXT'			=> $this->user->lang('MEMBER_PROFILE_TEXT', $value),
 		]);
 	}

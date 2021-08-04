@@ -1,6 +1,10 @@
 ## Member Profile Views Changelog
 
-### 1.0.4 - 2021-08-04
+### 1.0.5 - 2021-08-04
+
+- Code update.
+- Short syntax.
+- Add numberformat.
 
 ### 1.0.4 - 2020-01-15
 
