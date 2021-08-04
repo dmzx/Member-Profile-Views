@@ -77,9 +77,9 @@ class listener implements EventSubscriberInterface
 
 	static public function getSubscribedEvents()
 	{
-		return array(
+		return [
 			'core.memberlist_view_profile'		=> 'memberlist_view_profile',
-		);
+		];
 	}
 
 	public function memberlist_view_profile($event)
@@ -104,11 +104,11 @@ class listener implements EventSubscriberInterface
 			if ($row = $this->db->sql_fetchrow($result))
 			{
 				$counter_user = $row['counter_user'] + 1;
-				$sql = array(
+				$sql = [
 					'counter_user'	=> (int) $counter_user,
 					'date'			=> $time
 
-				);
+				];
 				$sql = 'UPDATE ' . $this->memberprofileviews_table . '
 					SET ' . $this->db->sql_build_array('UPDATE', $sql) . '
 					WHERE user_id = ' . (int) $user_ids . '
@@ -117,12 +117,12 @@ class listener implements EventSubscriberInterface
 			}
 			else
 			{
-				$sql = array(
+				$sql = [
 					'counter_user'	=> 1,
 					'user_id'		=> $user_ids,
 					'view_id'		=> $user_id,
 					'date'			=> $time
-				);
+				];
 				$sql = 'INSERT INTO ' . $this->memberprofileviews_table	. ' ' . $this->db->sql_build_array('INSERT', $sql);
 			}
 			$this->db->sql_query($sql);
@@ -145,14 +145,14 @@ class listener implements EventSubscriberInterface
 			$url = append_sid("{$this->root_path}memberlist.{$this->php_ext}?mode=viewprofile&amp;u={$user_id_member}");
 			$avatar = phpbb_get_user_avatar($totalviewsmember);
 
-			$this->template->assign_block_vars('member_viewed',array(
+			$this->template->assign_block_vars('member_viewed', [
 				'USERNAME'			=> $username,
 				'USERNAME_COLOUR'	=> $user_colour,
 				'TIME'				=> $user_time,
 				'URL'				=> $url,
 				'AVATAR'			=> empty($avatar) ? '<img src="' . $this->phpbb_admin_path . 'images/no_avatar.gif" width="60px;" height="60px;" alt="" />' : $avatar,
 				'COUNTER'			=> $totalviewsmember['counter_user'],
-			));
+			]);
 		}
 
 		$sql = 'SELECT SUM(counter_user) AS total_views
@@ -163,10 +163,10 @@ class listener implements EventSubscriberInterface
 		$total_views = (int) $row['total_views'];
 		$this->db->sql_freeresult($result);
 
-		$this->template->assign_vars(array(
+		$this->template->assign_vars([
 			'MEMBER_PROFILE_VIEW'			=> true,
 			'MEMBER_PROFILE_VIEWS'			=> $total_views,
 			'MEMBER_PROFILE_TEXT'			=> $this->user->lang('MEMBER_PROFILE_TEXT', $value),
-		));
+		]);
 	}
 }

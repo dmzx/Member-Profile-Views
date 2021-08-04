@@ -17,7 +17,7 @@ if (!defined('IN_PHPBB'))
 
 if (empty($lang) || !is_array($lang))
 {
-	$lang = array();
+	$lang = [];
 }
 
 // DEVELOPERS PLEASE NOTE
@@ -36,7 +36,7 @@ if (empty($lang) || !is_array($lang))
 // ’ » “ ” …
 //
 
-$lang = array_merge($lang, array(
+$lang = array_merge($lang, [
 	'MEMBERPROFILEVIEWS_SETTING'				=> 'Количество пользователей для Member Profile Views',
 	'MEMBERPROFILEVIEWS_SETTING_EXPLAIN'		=> 'Доступные значения от 2 до 255 пользователей. <br /><em>По умолчанию 100</em>',
-));
+]);

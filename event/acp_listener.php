@@ -15,9 +15,9 @@ class acp_listener implements EventSubscriberInterface
 {
 	static public function getSubscribedEvents()
 	{
-		return array(
+		return [
 			'core.acp_board_config_edit_add'	=>	'add_options',
-		);
+		];
 	}
 
 	public function add_options($event)
@@ -28,14 +28,14 @@ class acp_listener implements EventSubscriberInterface
 			$display_vars = $event['display_vars'];
 
 			// Define config vars
-			$config_vars = array(
-				'profileviews_value'	=> array('lang'	=> 'MEMBERPROFILEVIEWS_SETTING',	'validate' => 'int:1',	'type' => 'custom:1:255', 'function' => array($this, 'memberprofileviews_length'), 'explain' => true),
-			);
+			$config_vars = [
+				'profileviews_value'	=> ['lang'	=> 'MEMBERPROFILEVIEWS_SETTING',	'validate' => 'int:1',	'type' => 'custom:1:255', 'function' => [$this, 'memberprofileviews_length'], 'explain' => true],
+			];
 
-			$display_vars['vars'] = phpbb_insert_config_array($display_vars['vars'], $config_vars, array('after' => 'load_jumpbox'));
+			$display_vars['vars'] = phpbb_insert_config_array($display_vars['vars'], $config_vars, ['after' => 'load_jumpbox']);
 
 			// Update the display_vars	event with the new array
-			$event['display_vars'] = array('title' => $display_vars['title'], 'vars' => $display_vars['vars']);
+			$event['display_vars'] = ['title' => $display_vars['title'], 'vars' => $display_vars['vars']];
 		}
 	}
 

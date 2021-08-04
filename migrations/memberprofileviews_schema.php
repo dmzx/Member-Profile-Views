@@ -15,36 +15,36 @@ class memberprofileviews_schema extends migration
 {
 	public function update_data()
 	{
-		return array(
+		return [
 			// Add configs
-			array('config.add', array('profileviews_value', 100)),
-		);
+			['config.add', ['profileviews_value', 100]],
+		];
 	}
 
 	public function update_schema()
 	{
-		return array(
-			'add_tables'	=> array(
-				$this->table_prefix . 'memberprofileviews'	=> array(
-					'COLUMNS'	=> array(
-						'count_id'			=> array('UINT', null, 'auto_increment'),
-						'counter_user'		=> array('UINT', null),
-						'user_id'			=> array('UINT', null),
-						'view_id'			=> array('UINT', null),
-						'date'				=> array('TIMESTAMP', 0),
-					),
+		return [
+			'add_tables'	=> [
+				$this->table_prefix . 'memberprofileviews'	=> [
+					'COLUMNS'	=> [
+						'count_id'			=> ['UINT', null, 'auto_increment'],
+						'counter_user'		=> ['UINT', null],
+						'user_id'			=> ['UINT', null],
+						'view_id'			=> ['UINT', null],
+						'date'				=> ['TIMESTAMP', 0],
+					],
 					'PRIMARY_KEY'	=> 'count_id',
-				),
-			),
-		);
+				],
+			],
+		];
 	}
 
 	public function revert_schema()
 	{
-		return 	array(
-			'drop_tables'	=> array(
+		return 	[
+			'drop_tables'	=> [
 				$this->table_prefix . 'memberprofileviews',
-			),
-		);
+			],
+		];
 	}
 }

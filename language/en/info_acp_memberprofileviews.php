@@ -17,7 +17,7 @@ if (!defined('IN_PHPBB'))
 
 if (empty($lang) || !is_array($lang))
 {
-	$lang = array();
+	$lang = [];
 }
 
 // DEVELOPERS PLEASE NOTE
@@ -36,7 +36,7 @@ if (empty($lang) || !is_array($lang))
 // ’ » “ ” …
 //
 
-$lang = array_merge($lang, array(
+$lang = array_merge($lang, [
 	'MEMBERPROFILEVIEWS_SETTING'				=> 'Set value for Member Profile Views',
 	'MEMBERPROFILEVIEWS_SETTING_EXPLAIN'		=> 'Value adjustable from 2 till 255 members. <br /><em>Default is 100</em>',
-));
+]);

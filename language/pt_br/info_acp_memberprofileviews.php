@@ -17,7 +17,7 @@ if (!defined('IN_PHPBB'))
 
 if (empty($lang) || !is_array($lang))
 {
-	$lang = array();
+	$lang = [];
 }
 
 // DEVELOPERS PLEASE NOTE
@@ -36,7 +36,7 @@ if (empty($lang) || !is_array($lang))
 // ’ » “ ” …
 //
 
-$lang = array_merge($lang, array(
+$lang = array_merge($lang, [
 	'MEMBERPROFILEVIEWS_SETTING'				=> 'Quantidade de membros que visitaram o perfil a mostrar',
 	'MEMBERPROFILEVIEWS_SETTING_EXPLAIN'		=> 'Valor varia de 2 a 255. <br /><em>O padrão é 100</em>',
-));
+]);

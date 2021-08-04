@@ -18,7 +18,7 @@ if (!defined('IN_PHPBB'))
 
 if (empty($lang) || !is_array($lang))
 {
-	$lang = array();
+	$lang = [];
 }
 
 // DEVELOPERS PLEASE NOTE
@@ -37,7 +37,7 @@ if (empty($lang) || !is_array($lang))
 // ‚ ‘ ’ « » „ “ ” …
 //
 
-$lang = array_merge($lang, array(
+$lang = array_merge($lang, [
 	'MEMBER_PROFILE_VIEW'				=> 'Aufrufe Mitgliederprofil gesamt',
 	'MEMBER_PROFILE_TEXT'				=> 'Die letzten <strong>%d</strong> Mitglieder, die dein Profil angesehen haben',
-));
+]);

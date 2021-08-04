@@ -18,7 +18,7 @@ if (!defined('IN_PHPBB'))
 
 if (empty($lang) || !is_array($lang))
 {
-	$lang = array();
+	$lang = [];
 }
 
 // DEVELOPERS PLEASE NOTE
@@ -37,7 +37,7 @@ if (empty($lang) || !is_array($lang))
 // ’ » “ ” …
 //
 
-$lang = array_merge($lang, array(
+$lang = array_merge($lang, [
 	'MEMBERPROFILEVIEWS_SETTING'				=> 'Stel de waarde in voor de Member Profile Views',
 	'MEMBERPROFILEVIEWS_SETTING_EXPLAIN'		=> 'Waarde instelbaar van 2 tot 255 leden. <br /><em>Standaard is is 100</em>',
-));
+]);

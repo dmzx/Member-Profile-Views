@@ -18,7 +18,7 @@ if (!defined('IN_PHPBB'))
 
 if (empty($lang) || !is_array($lang))
 {
-	$lang = array();
+	$lang = [];
 }
 
 // DEVELOPERS PLEASE NOTE
@@ -37,7 +37,7 @@ if (empty($lang) || !is_array($lang))
 // ‚ ‘ ’ « » „ “ ” …
 //
 
-$lang = array_merge($lang, array(
+$lang = array_merge($lang, [
 	'MEMBERPROFILEVIEWS_SETTING'				=> 'Setze einen Wert für Mitgliederprofil-Aufrufe',
 	'MEMBERPROFILEVIEWS_SETTING_EXPLAIN'		=> 'Der Wert ist einstellbar zwischen 2 und 255 Mitglieder. <br /><em>Standard ist 100</em>',
-));
+]);
