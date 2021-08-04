@@ -1,6 +1,6 @@
 # Member Profile Views Extension
 
-[![Build Status](https://travis-ci.org/dmzx/Member-Profile-Views.svg?branch=master)](https://travis-ci.org/dmzx/Member-Profile-Views)
+[![Build Status](https://github.com/dmzx/Member-Profile-Views/workflows/Tests/badge.svg)](https://github.com/phpbb-extensions/dmzx/Member-Profile-Views)
 
 ## Install
 1. Download the latest release.
